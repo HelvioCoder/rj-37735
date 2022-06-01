@@ -1,12 +1,9 @@
 import './styles.css';
 import Navbar from './components/Navbar/Navbar'
 import {ItemListContainer} from './components/ItemListContainer/ItemListContainer'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
-
-   const audiencia = {
-           tipo : "viajero",
-   } 
 
    return (
       <div className="App">
@@ -14,7 +11,7 @@ function App() {
              <h6>Curso React en Coder - Profesor Conrado Lanusse - Alumno: Helvio Cruz</h6>
       
              <Navbar/>
-             <ItemListContainer nombre={audiencia.tipo}/>
+             <ItemListContainer />
              
          </div>
       </div>

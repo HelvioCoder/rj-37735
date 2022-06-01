@@ -27,14 +27,14 @@ ul{
 li{
   list-style: none;
   margin-right: 25px;
- font-size: 20px;
+  font-size: 20px;
 }
 a{
   text-decoration:none;
-  color: black;
+  color: rgb(10, 5, 5);
 }
 nav a:hover{
-  color:white;
+  color:rgb(14, 79, 109);
 }
 
 p{
