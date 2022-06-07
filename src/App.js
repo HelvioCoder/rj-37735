@@ -3,6 +3,8 @@ import Navbar from './components/Navbar/Navbar'
 import {ItemListContainer} from './components/ItemListContainer/ItemListContainer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer'
+
 function App() {
 
    return (
@@ -11,7 +13,8 @@ function App() {
              <h6>Curso React en Coder - Profesor Conrado Lanusse - Alumno: Helvio Cruz</h6>
       
              <Navbar/>
-             <ItemListContainer />
+             <ItemDetailContainer/>    
+    {/*         <ItemListContainer />   */}
              
          </div>
       </div>
