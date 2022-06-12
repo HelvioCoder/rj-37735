@@ -6,6 +6,7 @@ export const productos = [
         precio: 89,
         img: "./imgs/palitos.png",
         categoria:"almacen",
+        stock:15
     },
     {
         id:2,
@@ -14,6 +15,7 @@ export const productos = [
         precio: 99,
         img: "./imgs/arroz.png",
         categoria:"almacen",
+        stock:15
     }, 
     {
         id:3,
@@ -22,6 +24,7 @@ export const productos = [
         precio: 479,
         img: "./imgs/aceite.png",
         categoria:"almacen",
+        stock:8
     }, 
     {
         id:4,
@@ -30,6 +33,7 @@ export const productos = [
         precio: 190,
         img: "./imgs/enjuaguebucal.png",
         categoria:"farmacia",
+        stock:15
     }, 
     {
         id:5,
@@ -38,6 +42,7 @@ export const productos = [
         precio: 1250,
         img: "./imgs/pañales.png",
         categoria:"farmacia",
+        stock:6
     }, 
     {
         id:6,
@@ -46,6 +51,7 @@ export const productos = [
         precio: 180,
         img: "./imgs/cepillodental.png", 
         categoria:"farmacia",
+        stock:9
     },
 ]
 
