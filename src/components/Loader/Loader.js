@@ -1,4 +1,4 @@
-/* C/RENDER COMPONENTE DE CARGA LOADING EJ 3 51:00 A 52 */
+/*RENDER*/
 
 import { Spinner } from 'react-bootstrap'
  

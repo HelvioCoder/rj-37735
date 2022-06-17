@@ -1,75 +1,15 @@
-
-/*CONTEXT
-
-import { useContext, useState , useEffect } from 'react'
-import { Spinner } from 'react-bootstrap'
-import { pedirDatos } from '../../mook/pedirDatos'
-import ItemList from '../ItemList/ItemList'
-
-import {useParams} from 'react-router-dom'
-
-      
-export const ItemListContainer = () => {
-
-                           
-     
-        const [items, setItems] = useState([])   
-        const [loading , setLoading ] = useState (true)
-        
-        const {categoryId} = useParams()
-        console.log (categoryId)
-                
-        useEffect(() => { 
-               
-             pedirDatos ()   
-                 .then((resp)=>{
-                     if(!categoryId){
-                          setItems(resp)   
-                     }else{
-                         setItems(resp.filter((item)=>item.categoria===categoryId))
-                     }   
-                 } )
-                 .catch((error)=>{
-                     console.log("ERROR :", error)
-                 } )
-                 .finally(() => {
-                     setLoading(false)    
-                 } ) 
-        },[categoryId])   
-
-
-
-    return (
-        <section className="container my5">
-        
-             {
-                loading
-                ?    <Spinner animation='border' role='status'>
-                        <span className='visually-hidden'>Loading. . .</span>
-                    </Spinner>
-                
-               :  <ItemList items={items}/>   
-            }
-         </section>
-    )
-}
-*/
-
-
-/*   RENDER */
+/*FIREBASE*/
 
 import { useState , useEffect } from 'react'
-
-import { pedirDatos } from '../../mook/pedirDatos'
 import ItemList from '../ItemList/ItemList'
-
 import {useParams} from 'react-router-dom'
 import {Loader} from '../Loader/Loader'
       
+import {collection, getDocs, query, where} from 'firebase/firestore'
+import {db} from "../../firebase/config"
+      
 export const ItemListContainer = () => {
-
-                           
-     
+    
         const [items, setItems] = useState([])   
         const [loading , setLoading ] = useState (true)
         
@@ -78,20 +18,26 @@ export const ItemListContainer = () => {
                 
         useEffect(() => { 
                
-             pedirDatos ()   
+             //1 ARMA REFERENCIA SYNC
+             const productosRef = collection(db, "productos")
+             const q = categoryId ? query(productosRef, where("categoria", "==", categoryId)) : productosRef
+            //2 LLAMA AFIREBASE ASYNC 
+            getDocs(q)
                  .then((resp)=>{
-                     if(!categoryId){
-                          setItems(resp)   
-                     }else{
-                         setItems(resp.filter((item)=>item.categoria===categoryId))
-                     }   
+                     const newItems= resp.docs.map( ( doc ) =>{
+                         return{
+                            id : doc.id,
+                            ...doc.data()
+                         }
+                      } ) 
+                  console.log(newItems)
+                   setItems(newItems)
+               })
+                 .finally( ()=>{ 
+                    setLoading(false)
                  } )
-                 .catch((error)=>{
-                     console.log("ERROR :", error)
-                 } )
-                 .finally(() => {
-                     setLoading(false)    
-                 } ) 
+               
+
         },[categoryId])   
 
 
