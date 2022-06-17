@@ -42,7 +42,7 @@ export const productos = [
         precio: 1250,
         img: "/imgs/pañales.png",
         categoria:"farmacia",
-        stock:6
+        stock:0
     }, 
     {
         id:6,

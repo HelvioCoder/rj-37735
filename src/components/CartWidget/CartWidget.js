@@ -1,15 +1,3 @@
-/*ORIGINAL
-const CartWidget = ( )=> {
-
-    return (
-           <div>
-                    
-           </div>
-            )
-}
-export default CartWidget
-*/
-
 /*HOY14*/
 //import {useContext} from 'react'
 import {BsFillCartPlusFill} from 'react-icons/bs'
