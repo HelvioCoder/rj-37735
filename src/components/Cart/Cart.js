@@ -1,10 +1,8 @@
-/*  RENDER */
-
 import { useCartContext } from "../../context/CartContext"
 import {BsFillTrashFill} from "react-icons/bs"
 
-            import { Link } from "react-router-dom"
-            import {EmptyCart} from "./EmptyCart"
+import { Link } from "react-router-dom"
+import {EmptyCart} from "./EmptyCart"
          
 
 export const Cart = () => {
@@ -31,6 +29,7 @@ export const Cart = () => {
           <h4>TOTAL: ${ totalPrice() }</h4>
 
           <button onClick={emptyCart } className="btn btn-danger"> Vaciar carrito </button>
+          <Link to="/checkout" className="btn btn-success mx-4">Terminar mi compra</Link>
          </div>
     )
 }

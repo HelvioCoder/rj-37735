@@ -1,4 +1,3 @@
-
 import './styles.scss';
 import Navbar from './components/Navbar/Navbar'
 import {ItemListContainer} from './components/ItemListContainer/ItemListContainer'
@@ -9,12 +8,12 @@ import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
 import {Almacen} from './components/Almacen/Almacen'
 import {Farmacia} from './components/Farmacia/Farmacia'
 import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer'
+import {CartProvider } from './context/CartContext';
 
-import { CartContext, CartProvider } from './context/CartContext';
-import {useState} from 'react'
 
 import { Cart } from './components/Cart/Cart';
 
+import { Checkout } from './components/Checkout/Checkout'
 
   function App() {
       
@@ -27,7 +26,7 @@ import { Cart } from './components/Cart/Cart';
                         <Route path='/categorias/:categoryId' element = {<ItemListContainer/>}/>
                               <Route path='/item/:itemId' element = {<ItemDetailContainer/>}/>  
                                        <Route path='/cart' element = {<Cart/>}/>  
-
+                                       <Route path='/checkout' element = {<Checkout/>}/>  
                         <Route path='/almacen' element = {<Almacen/>}/>
                         <Route path='/farmacia' element = {<Farmacia/>}/>
                         <Route path='*'element = {<Navigate to={"/"}/>}/>

@@ -1,5 +1,3 @@
-/*FIREBASE*/
-
 import { useState , useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
 import {useParams} from 'react-router-dom'
@@ -36,11 +34,7 @@ export const ItemListContainer = () => {
                  .finally( ()=>{ 
                     setLoading(false)
                  } )
-               
-
         },[categoryId])   
-
-
 
     return (
         <section className="container my5">
