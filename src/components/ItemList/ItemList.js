@@ -4,6 +4,7 @@ const ItemList = ( {items} ) => {
 
        return(
            <div>
+               <p> Deploy con Netlify</p>
                <h2>Nuestros productos</h2>
                <hr/>
                 {
