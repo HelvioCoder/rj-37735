@@ -1,5 +1,5 @@
 {
-  "name": "helvio",
+  "name": "coder-react-helvio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -43,26 +43,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "***  Este proyecto se llama Distribuidora HC, es una web e-commerce .",
-  "main": "index.js",
-  "repository": {
-<<<<<<< HEAD
-    "type": "git",
-    "url": "git+https://github.com/HelvioCoder/rj-37735.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/HelvioCoder/rj-37735/issues"
-  },
-  "homepage": "https://github.com/HelvioCoder/rj-37735#readme"
-=======
-    "type": "git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
->>>>>>> 7535e1f48d40b4b6e7f83ceaf103eeffce133cad
-}
+  }
+ 
+  }
+
