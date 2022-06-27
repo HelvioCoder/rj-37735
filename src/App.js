@@ -24,9 +24,9 @@ import { Checkout } from './components/Checkout/Checkout'
                   <Routes>
                         <Route path='/'element = { <ItemListContainer/> }/>
                         <Route path='/categorias/:categoryId' element = {<ItemListContainer/>}/>
-                              <Route path='/item/:itemId' element = {<ItemDetailContainer/>}/>  
-                                       <Route path='/cart' element = {<Cart/>}/>  
-                                       <Route path='/checkout' element = {<Checkout/>}/>  
+                        <Route path='/item/:itemId' element = {<ItemDetailContainer/>}/>  
+                         <Route path='/cart' element = {<Cart/>}/>  
+                         <Route path='/checkout' element = {<Checkout/>}/>  
                         <Route path='/almacen' element = {<Almacen/>}/>
                         <Route path='/farmacia' element = {<Farmacia/>}/>
                         <Route path='*'element = {<Navigate to={"/"}/>}/>

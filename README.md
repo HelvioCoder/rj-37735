@@ -1,6 +1,30 @@
-# Getting Started with Create React App
+# Project name
+***
+ Este proyecto se llama Distribuidora HC, es una web e-commerce .
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+***
+1. [General Info]
+   Esta aplicación desarrolla el comercio de productos, desde una web a personas individuales. Incluye la promoción, descripcion de un producto hasta el cierre de la compra sujeto a alcance de stock y previa carga de formulario y validaciones creadas con la libreria formik y yup. 
+   El stock esta vinculado a una base de datos en el servidor de Firebase donde se actualiza permanentemente el stock de cada producto y asi brindar al cliente la informacion necesaria de su orden de compra. 
+  ![Imagen de orden de compra](./public/imgs/orden.png)
+
+2. [Technologies]
+   Tecnologias aplicadas:
+* [React-router-dom](https://es.reactjs.org/): Version "^18.1.0"
+* [Firebase](https://firebase.google.com/): Version "^9.8.3"
+* [Library Bootstrap](https://getbootstrap.com/): Version "^5.1.3"
+
+3. [Installation]
+ Segun el editor de texto o aplicación como Visual Code, Atom, etc. Se podrá ejecutar la app.  
+ ```
+ $ git clone https://github.com/HelvioCoder/rj-37735.git
+ $ cd ../rj-37735
+ $ npm install
+ $ npm start
+ #  Getting Started with Create React App
+
+***
 
 ## Available Scripts
 

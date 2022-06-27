@@ -1,3 +1,4 @@
+/*
 export const productos = [
     {
         id:1,
@@ -54,6 +55,6 @@ export const productos = [
         stock:9
     },
 ]
-
+*/
 
 

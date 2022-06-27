@@ -7,7 +7,7 @@ const ItemList = ( {items} ) => {
                <h2>Nuestros productos</h2>
                <hr/>
                 {
-                  items.map((item) => <Item  key= { item .id }  item = { item }/> )    
+                  items.map((item) => <Item  key= { item.id }  item = { item }/> )    
                 }
            </div>
        )

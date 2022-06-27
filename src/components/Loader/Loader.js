@@ -1,5 +1,3 @@
-/*RENDER*/
-
 import { Spinner } from 'react-bootstrap'
  
  export const Loader = () => {

@@ -1,13 +1,12 @@
-//import {useContext} from 'react'
 import {BsFillCartPlusFill} from 'react-icons/bs'
 import {Link} from 'react-router-dom'
-//import { CartContext } from '../../context/CartContext'
+
 import { useCartContext } from '../../context/CartContext'
 
 export const CartWidget = ( )=> {
 
-  //   const {totalQuantity} = useContext(CartContext) 
-       const {totalQuantity} =useCartContext()     
+   
+     const {totalQuantity} =useCartContext()     
 
     return (
            <Link to ="/cart" className={`widget${totalQuantity()===0 ?'widget-hidden':''}`}>           

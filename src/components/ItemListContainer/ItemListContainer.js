@@ -16,10 +16,9 @@ export const ItemListContainer = () => {
                 
         useEffect(() => { 
                
-             //1 ARMA REFERENCIA SYNC
              const productosRef = collection(db, "productos")
              const q = categoryId ? query(productosRef, where("categoria", "==", categoryId)) : productosRef
-            //2 LLAMA AFIREBASE ASYNC 
+             
             getDocs(q)
                  .then((resp)=>{
                      const newItems= resp.docs.map( ( doc ) =>{

@@ -1,5 +1,3 @@
-
-/*render*/
 export const ItemCounter = ({max , setCounter, counter, handleAgregar}) => {
 
    const handleSumar =() =>{
