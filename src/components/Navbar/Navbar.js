@@ -6,7 +6,7 @@ const Navbar = ( )=> {
     return (
             <header className="header">
                 <div className="header__container">   
-                    <Link to ={"/"}> <h1 className="header__logo"> Distribuidora HC en React</h1> </Link>
+                    <Link to ={"/"}> <h1 className="header__logo"> Distribuidora HC React</h1> </Link>
                     
                     <nav className="header__navbar">
                           
